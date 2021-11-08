@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+  $("button").click(function(){
+  
+  var c = document.getElementById("box")
+   if(document.getElementById("text1").value == 	document.getElementById("text2").value){
+   
+   c.style.backgroundColor = 'green'
+    $("div").animate({
+      left: '400px',
+      height: '350px',
+      width: '350px'
+      
+    });
+    $("div").animate({
+      left: '0px',
+      height: '200px',
+      width: '200px',
+    });
+	}
+    if(document.getElementById("text1").value != 	document.getElementById("text2").value){
+     c.style.backgroundColor = 'red'
+    $("div").animate({
+      left: '200px',
+      height: '400px',
+      width: '350px'
+      
+    });
+    $("div").animate({
+      left: '0px',
+      height: '200px',
+      width: '200px',
+    });
+    }
+
+  
+});});
+</script> 
+<style type="text/css">
+  .size{
+    background-size: 10px;
+    padding-top: 5px;
+    margin-right: 100px;
+
+
+
+  }
+</style>
+</head>
+<body>
+<input class =" size" id="text1" type="text" placeholder="Text 1 "><input class ="size" type="text" placeholder="Text 2" id="text2"><br><br>
+
+<button>check</button>
+
+
+<br></br>
+
+<div id="box" style="background:blue;
+					height:300px;
+          margin-right: 300px;
+					width:300px;
+					position:absolute;"></div>
+
+</body>
+</html>
